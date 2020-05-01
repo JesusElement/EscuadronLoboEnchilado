@@ -1,0 +1,92 @@
+/* Estos son los estilos para Costos de Escuadron Lobo Enchilado */
+
+.contenedor {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto;
+    grid-template-areas: "heder" "contenido" "footer"
+}
+
+.contenedor 
+.heder {
+    grid-area: heder;
+}
+
+.contenedor 
+.contenido {
+    grid-area: contenido;
+}
+
+.contenedor 
+.footer {
+    grid-area: footer;
+}
+
+.contenedor .contenido 
+.loginCss {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "colder row1 colizq" "colder row2 colizq" "colder row3 colizq";
+}
+
+.contenedor .contenido .loginCss 
+.colder {
+    grid-area: colder;
+}
+
+.contenedor .contenido .loginCss 
+.row1 {
+    grid-area: row1;
+    height: 100%;
+}
+
+.contenedor .contenido .loginCss 
+.row2 {
+    width: 100%;
+    height: 100%;
+    grid-area: row2;
+    grid-gap: 10px;
+    background-color: darkgray;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "logintituloCss logintituloCss" 
+                        "OpcionesCss D20";
+}
+
+.contenedor .contenido .loginCss
+.opcionesCss{
+    grid-area: OpcionesCss;
+    text-align: right;
+}
+
+.contenedor .contenido .loginCss .opcionesCss
+.labelLog{
+        width: 200px;
+}
+
+
+
+.contenedor .contenido .loginCss
+.D20{
+    grid-area: D20;
+    background-color: darkorange;
+}
+
+.contenedor .contenido .loginCss
+.logintituloCss{
+    grid-area: logintituloCss;
+    background-color: darkmagenta;
+}
+
+.contenedor .contenido .loginCss 
+.row3 {
+    grid-area: row3;
+}
+
+.contenedor .contenido .loginCss 
+.colizq {
+    grid-area: colizq;
+}
