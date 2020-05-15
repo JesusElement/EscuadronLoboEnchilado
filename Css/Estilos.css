@@ -19,11 +19,15 @@
     display: grid;
     justify-content: center;
     margin-top: 3rem;
-    background-color: cadetblue;
     height: 100%;
-    width: 100%;
 }
 
 .contenedor .contenido .LoginCss {
     font-size: larger;
+}
+
+.contenedor .contenido .LoginCss .loginMensajesCss {
+    font-size: 15px !important;
+    margin-top: 2rem;
+    text-align: center;
 }
