@@ -1,0 +1,29 @@
+.contenedor {
+    grid-template-rows: auto;
+    grid-area: "header" "contenido" "footer";
+}
+
+.contenedor .header {
+    grid-area: header;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+}
+
+.contenedor .footer {
+    grid-area: footer;
+}
+
+.contenedor .contenido .LoginCss {
+    display: grid;
+    justify-content: center;
+    margin-top: 3rem;
+    background-color: cadetblue;
+    height: 100%;
+    width: 100%;
+}
+
+.contenedor .contenido .LoginCss {
+    font-size: larger;
+}
