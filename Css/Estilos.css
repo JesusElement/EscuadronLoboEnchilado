@@ -5,10 +5,40 @@
 
 .contenedor .header {
     grid-area: header;
+    padding: 1rem;
 }
+
+.contenedor .header 
+.nav{
+   margin-left: 3rem;
+    
+}
+
+.contenedor .header .nav
+.navBtnCss{
+    width: 10rem;
+    height: 2.8rem;
+    text-align: center;
+    margin-right: 3px;
+}
+
+.contenedor .header .nav
+.navBtnCss:hover{
+   background-color: #f4f4f4;
+   color: black;
+}
+
+
 
 .contenedor .contenido {
     grid-area: contenido;
+}
+
+.contenedor .contenido .FormAgregarEmpleado{
+    display: grid;
+    justify-content: center;
+    width: 80%;
+
 }
 
 .contenedor .footer {

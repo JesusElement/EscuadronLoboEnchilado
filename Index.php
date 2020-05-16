@@ -1,8 +1,8 @@
 <?php
-    session_start();
+    session_start(); 
     if(isset($_SESSION['Sesion'])){
         if ($_SESSION['Sesion'] == 'On') {
-            echo"Bienvendio :D";
+            include('php/Clases.php');
         }else{
             header("Location:login.php?error=1");
             exit();
@@ -16,7 +16,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Esqueleto</title>
+        <title>Bienvenido</title>
         <?php
         include('Componentes/Recursos.php');
         ?>
@@ -29,6 +29,15 @@
         ?>
     </div>
     <div class="contenido">
+        <?php
+        $table = "empleados";
+        $Imprimir = new DBC;
+        $ResImprimir = $Imprimir->ImprimirTodo($table)
+            
+			// $Imprimir = new DBC;
+			// $ResImprimir = $Imprimir->ImprimirTodo($Tab);
+
+        ?>
     </div>
     <div class="footer">
         <?php 
