@@ -59,6 +59,30 @@
 
   }
 
+    
+  function ImprimirTodoDonde($table, $col ,$val){
+
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+    
+    $sql = "SELECT * FROM $table WHERE $col = $val;"; 
+    $Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+        $Res->data_seek(0);
+    
+        // echo "<pre>";
+        //  print_r($row=$Res->fetch_array(MYSQLI_NUM));
+        // echo "</pre>";
+        // print_r($row[1]);
+        // $row=$Res->fetch_array(MYSQLI_NUM);
+        $conexion = null;
+        return $Res;
+}
+
+}
+
       function jefeIdNom(){
     
         $conex = new DBC;
@@ -288,8 +312,65 @@ function InsertaUnoDatos($table,$col_q,$val_a){
         return $Res;
         exit();
     }
+
    
 }
+
+function ImprimirEmpUs($table){
+
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+    
+    $sql = "SELECT em.idEmpleados, em.Nombre, em.ApeUno, em.ApeDos, em.email, em.FechaAlta, em.FechaBaja, de.Nombre as NomDepa, em.idJefe, em.idRango, us.idCuenta
+    FROM empleados as em INNER JOIN usuario as us on em.idEmpleados = us.idCuenta INNER JOIN departamento as de on de.idDepartamento = em.idDepartamento"; 
+    $Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+        $Res->data_seek(0);
+    
+        // echo "<pre>";
+        //  print_r($row=$Res->fetch_array(MYSQLI_NUM));
+        // echo "</pre>";
+        // print_r($row[1]);
+        // $row=$Res->fetch_array(MYSQLI_NUM);
+        $conexion = null;
+        return $Res;
+        }
+
+    }
+
+    function ActualizarCuatro($ColumUno, $ColumDos, $ColumTres, $ColumCuatro, $ColumCinco, $VarUno, $VarDos, $VarTres, $VarCuatro, $VarCinco, $Tab){
+        $conex = new DBC;
+        $conexion =$conex ->Conecta();
+		
+		$Tabla = $Tab;
+		$ColumnaUno = $ColumUno;
+		$ColumnaDos = $ColumDos;
+		$ColumnaTres = $ColumTres;
+		$ColumnaCuatro = $ColumCuatro;
+		$ColumnaCinco = $ColumCinco;
+		
+		$ValorUno = $VarUno;
+		$ValorDos = $VarDos;
+		$ValorTres = $VarTres;
+		$ValorCuatro = $VarCuatro;
+		$ValorCinco= $VarCinco;
+      
+    $sql = "UPDATE $Tabla SET $ColumnaDos='".$ValorDos."',$ColumnaTres='".$ValorTres."',$ColumnaCuatro='".$ValorCuatro."', $ColumnaCinco = '".$ValorCinco."'WHERE $ColumnaUno='".$ValorUno."';";
+    $Res = $conexion ->query($sql);  
+        if ($Res===false) {
+            trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+        } else {
+      
+            echo "<script> alert('Actualizado!!!');
+            location.href='AdministrarEmpleados.php'
+          </script>";
+       
+            return $Res;
+            }
+        		
+	}
 
     
     

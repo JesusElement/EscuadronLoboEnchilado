@@ -41,6 +41,20 @@
 
 }
 
+.contenedor .contenido
+.AdminEmpleadosCss{
+    display: grid;
+    justify-content: center;
+    width: 80%;
+}
+
+.contenedor .contenido .AdminEmpleadosCss
+.tab{
+    text-align: center;
+}
+
+
+
 .contenedor .footer {
     grid-area: footer;
 }

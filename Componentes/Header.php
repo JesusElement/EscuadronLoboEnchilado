@@ -19,7 +19,7 @@
   </button>
   <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
     <a class='dropdown-item' href='AgregarEmpleadoForm.php'>Agregar</a>
-    <a class='dropdown-item' href='#'>Administrar</a>
+    <a class='dropdown-item' href='AdministrarEmpleados.php'>Administrar</a>
   
   </div>
 </div>
