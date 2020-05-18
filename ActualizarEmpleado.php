@@ -47,6 +47,10 @@ echo "<br>". $VarUno = $_POST['idForm'];
 $UpdateEm = new DBC;
 $ResUpdateEm = $UpdateEm->ActualizarCuatro($ColumUno, $ColumDos, $ColumTres, $ColumCuatro, $ColumCinco, $VarUno, $VarDos, $VarTres, $VarCuatro, $VarCinco, $Tab);
 
+echo "<script> alert('Baja Autorizada!!!');
+location.href='AdministrarEmpleados.php'
+</script>";
+
     }else{
       $table = "empleados";
       $col = "idEmpleados";

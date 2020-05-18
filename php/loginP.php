@@ -24,7 +24,7 @@
                     //echo"La contraseña es correcta";
                     //Opteniendo datos e iniciando sesion
                         
-                    $sql = "SELECT em.Nombre, em.ApeUno, em.ApeDos, em.FechaBaja, em.idRango  FROM empleados as em INNER JOIN usuario as u on em.idEmpleados = u.idCuenta  WHERE em.idEmpleados = '$row[0]'";
+                    $sql = "SELECT em.Nombre, em.ApeUno, em.ApeDos, em.FechaBaja, em.idRango, em.idEmpleados  FROM empleados as em INNER JOIN usuario as u on em.idEmpleados = u.idCuenta  WHERE em.idEmpleados = '$row[0]'";
                     $Res = $conexion->query($sql);
                     if ($Res===false) {
                         trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
@@ -38,6 +38,7 @@
                         if ($row[3] == null ) {
                             echo"Trabajador Activo";
                             session_start();
+                            $_SESSION['id'] = $row[5];
                             $_SESSION['Nombre'] = $row[0];
                             $_SESSION['ApeUno'] = $row[1];
                             $_SESSION['ApeDos'] = $row[2];

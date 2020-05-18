@@ -370,7 +370,44 @@ function ImprimirEmpUs($table){
             return $Res;
             }
         		
-	}
+    }
+
+/* --------------------------- Update para 2 datos -------------------------- */
+function ActualizarDos($ColumUpdateUno, $ColumUpdateDos, $ColumWhere, $VarWhere, $VarDatoUno, $VarDatoDos, $Tab){
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+  
+$sql = "UPDATE $Tab SET $ColumUpdateUno = '$VarDatoUno', $ColumUpdateDos = '$VarDatoDos'  WHERE $ColumWhere = '$VarWhere'";
+$Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+  
+   
+   
+        return $Res;
+        }
+            
+}
+
+    
+    
+/* ------------------------- Update de un solo dato ------------------------- */
+function ActualizarUno($ColumUpdate, $ColumWhere, $VarWhere, $VarDato, $Tab){
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+  
+$sql = "UPDATE $Tab SET $ColumUpdate = '$VarDato' WHERE $ColumWhere = '$VarWhere'";
+$Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+  
+       
+        return $Res;
+        }
+            
+}
 
     
     

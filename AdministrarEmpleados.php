@@ -88,8 +88,8 @@
          echo "<th scope='row'>".$row['NomDepa']."</th>";
          echo "<th scope='row'>".$row['idJefe']."</th>";
          echo "<th scope='row'>".$row['idRango']."</th>";
-         echo "<td><a type='button' class='btn btn-outline-success' href='BajaEmpleado.php?id=".$row['idCuenta']."'>Usuario</a></td>";
-         echo "<td><a type='button' class='btn btn-outline-danger' href='BajaEmpleado.php?id=".$row['idEmpleados']."'>Baja</a></td>";
+         echo "<td><a type='button' class='btn btn-outline-success' href='UsuarioEmpleado.php?id=".$row['idCuenta']."'>Usuario</a></td>";
+         echo "<td><a type='button' id='jsBtnBaja' class='btn btn-outline-danger' href='BajaEmpleado.php?id=".$row['idEmpleados']."'>Baja</a></td>";
          echo "<td><a type='button' class='btn btn-outline-info' href='ActualizarEmpleado.php?id=".$row['idEmpleados']."'>Actualizar</a></td>";
          echo"</tr>";
 

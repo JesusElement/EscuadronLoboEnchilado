@@ -13,4 +13,17 @@ $( document ).ready(function() {
         }
      });
 
+/* ------------- Preguntar si estan seguros de baja de empleado ------------- */
+ 
+     $('#jsBtnBaja').click(function(){
+     var m = "";
+      if(confirm("Confirme baja (Es definitiva)...")){
+       
+    }
+    else{
+        return false;
+    }
+     });
+
+
 });

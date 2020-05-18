@@ -25,6 +25,18 @@
 </div>
   </li>
   <li class='nav-item'>
+  <div class='dropdown'>
+  <button class='btn btn-dark active navBtnCss dropdown-toggle' type='button' id='dropdownMenuButtonD' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+    Departamentos
+  </button>
+  <div class='dropdown-menu' aria-labelledby='dropdownMenuButtonD'>
+    <a class='dropdown-item' href='AgregarDepartamentoForm.php'>Nuevo</a>
+    <a class='dropdown-item' href='AdministrarDepartamentos.php'>Administrar</a>
+  
+  </div>
+</div>
+  </li>
+  <li class='nav-item'>
   <a class='nav-link active btn-dark navBtnCss' href='php/DestruirSession.php'>Salir</a>
 </li>
 
