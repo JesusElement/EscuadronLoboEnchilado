@@ -30,8 +30,8 @@
     Departamentos
   </button>
   <div class='dropdown-menu' aria-labelledby='dropdownMenuButtonD'>
-    <a class='dropdown-item' href='AgregarDepartamentoForm.php'>Nuevo</a>
-    <a class='dropdown-item' href='AdministrarDepartamentos.php'>Administrar</a>
+    <a class='dropdown-item' href='AgregarDepartamento.php'>Nuevo</a>
+    <a class='dropdown-item' href='AdministraDepartamento.php'>Administrar</a>
   
   </div>
 </div>

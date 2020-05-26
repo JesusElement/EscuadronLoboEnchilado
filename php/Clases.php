@@ -234,6 +234,43 @@ function InsertaSieteDatos($table,$col_q,$col_w,$col_e,$col_r,$col_t,$col_y,$col
    
 }
 
+/* -------------------------- INSERTA SESIES DATOS -------------------------- */
+
+function InsertaSeisDatos($table,$col_q,$col_w,$col_e,$col_r,$col_t,$col_y,$val_a,$val_b,$val_c,$val_d,$val_e,$val_f){
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+
+    $sql = "
+    INSERT INTO $table 
+    ($col_q,
+     $col_w,
+     $col_e,
+     $col_r,
+     $col_t,
+     $col_y
+     ) 
+    
+    VALUES (
+        '$val_a',
+        '$val_b',
+        '$val_c',
+        '$val_d',
+        '$val_e',
+        '$val_f'
+        )
+    ";
+
+    $Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else { 
+        $Res = "y";
+        return $Res;
+        exit();
+    }
+   
+}
+
 /* ---------------------------- INSERT DE 3 DATOS --------------------------- */
 function InsertaTresDatos($table,$col_q,$col_w,$col_e,$val_a,$val_b,$val_c){
     $conex = new DBC;
@@ -363,14 +400,32 @@ function ImprimirEmpUs($table){
             trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
         } else {
       
-            echo "<script> alert('Actualizado!!!');
-            location.href='AdministrarEmpleados.php'
-          </script>";
+     
        
             return $Res;
             }
         		
     }
+
+/* ----------------------------- ACTUALIZAR TRES ---------------------------- */
+function ActualizarTres($ColumUpdateUno, $ColumUpdateDos, $ColumUpdateTres, $ColumWhere, $VarWhere, $VarDatoUno, $VarDatoDos, $VarDatoTres, $Tab){
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+  
+$sql = "UPDATE $Tab SET $ColumUpdateUno = '$VarDatoUno', $ColumUpdateDos = '$VarDatoDos', $ColumUpdateTres = '$VarDatoTres'  WHERE $ColumWhere = '$VarWhere'";
+$Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+  
+   
+   
+        return $Res;
+        }
+            
+}
+
+  
 
 /* --------------------------- Update para 2 datos -------------------------- */
 function ActualizarDos($ColumUpdateUno, $ColumUpdateDos, $ColumWhere, $VarWhere, $VarDatoUno, $VarDatoDos, $Tab){
@@ -409,8 +464,33 @@ $Res = $conexion ->query($sql);
             
 }
 
+/* ------------------ Saber Nombre del jede de deapartameto ----------------- */
+
     
+function ImprimirJefeDepa($idJefe){
+
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
     
+
+$sql = "SELECT j.idJefe AS idJnom, em.Nombre nomJnom FROM jefes as j INNER JOIN empleados as em on j.idEmpleadoJ = em.idEmpleados WHERE j.idJefe = '$idJefe' ;"; 
+    $Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+        $Res->data_seek(0);
+    
+        // echo "<pre>";
+        //  print_r($row=$Res->fetch_array(MYSQLI_NUM));
+        // echo "</pre>";
+        // print_r($row[1]);
+        // $row=$Res->fetch_array(MYSQLI_NUM);
+        $conexion = null;
+        return $Res;
+}
+
+}
+
 
 }
 

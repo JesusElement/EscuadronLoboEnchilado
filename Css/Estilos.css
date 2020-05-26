@@ -41,6 +41,11 @@
 
 }
 
+.contenedor .contenido .FormAgregarEmpleado .idD{
+    display: none;
+
+}
+
 .contenedor .contenido
 .AdminEmpleadosCss{
     display: grid;
