@@ -52,9 +52,7 @@
             
             $InsertaUser = new DBC;
             $ResInsertaUser = $InsertaUser->InsertaDosDatos($table, $col_q, $col_w, $val_a, $val_b);
-            echo "<script> alert('Actualizado!!!');
-            location.href='AdministrarEmpleados.php'
-          </script>";
+               
            }else{
     
 

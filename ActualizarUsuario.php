@@ -94,7 +94,7 @@ location.href='AdministrarEmpleados.php'
         <div class='form-row'>
 <div class='form-group col-md-12'>
   <label for='id'>id</label>
-  <input type='text' value='".$row['idCuenta']."' name='idForm' class='form-control' id='nom' disabled required>
+  <input type='text' value='".$row['idCuenta']."' name='idForm' class='form-control' id='nom' required>
 </div>
 </div>
 <div class='form-row'>

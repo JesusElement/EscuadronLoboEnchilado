@@ -16,7 +16,7 @@
 
 .contenedor .header .nav
 .navBtnCss{
-    width: 10rem;
+    width: 12rem;
     height: 2.8rem;
     text-align: center;
     margin-right: 3px;
@@ -24,7 +24,7 @@
 
 .contenedor .header .nav
 .navBtnCss:hover{
-   background-color: #f4f4f4;
+   background-color: #00BFFF;
    color: black;
 }
 
@@ -35,14 +35,10 @@
 }
 
 .contenedor .contenido .FormAgregarEmpleado{
-    display: grid;
+    display: block;
     justify-content: center;
-    width: 80%;
-
-}
-
-.contenedor .contenido .FormAgregarEmpleado .idD{
-    display: none;
+    width: 70%;
+    padding: 90px;
 
 }
 

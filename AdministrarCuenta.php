@@ -14,10 +14,10 @@
 /*                    Funciones para imprimir en la pagina                    */
 /* -------------------------------------------------------------------------- */
 
-/* -------------------- Para llamar a todos los empleados ------------------- */
-            $table = 'empleados';
-            $Emplados = new DBC;
-            $ResEmpleados = $Emplados -> ImprimirEmpUs($table);
+/* -------------------- Para llamar a las cuentas del catalogo ------------------- */
+            $table = 'cuenta';
+            $cuenta = new DBC;
+            $Rescuenta = $cuenta -> ImprimirEmpUs($table);
    
 
         }else{
@@ -33,7 +33,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Administrar Empleado</title>
+        <title>Administrar Cuentas</title>
         <?php
         include('Componentes/Recursos.php');
         ?>
@@ -47,65 +47,54 @@
     </div>
     <div class="contenido">
         <div class="AdminEmpleadosCss">
-        <h3>Lista de empleados</h3>
+        <h3>Catalogo de Cuentas</h3>
         <br>
         <table class="table tab">
   <thead class="thead-dark">
     <tr>
   
+      <th scope="col">idCuenta</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Apellido Uno</th>
-      <th scope="col">Apellido Dos</th>
-      <th scope="col">email</th>
-      <th scope="col">Fecha Alta</th>
-      <th scope="col">Fecha Baja</th>
-      <th scope="col">Departamento</th>
-      <th scope="col">Jefe</th>
-      <th scope="col">Rango</th>
-      <th scope="col">Usuario</th>
-      <th scope="col">Baja</th>
-      <th scope="col">Actualizar</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Activo</th>
+      <th scope="col">Creacion</th>
+      <th scope="col">Actualizacion</th>
+      <th scope="col">idEmpleado</th>
+      
     
 
     </tr>
   </thead>
   <tbody>
     
-        
+  
         <?php
         // echo"<pre>";        
-        // print_r($ResEmpleados->fetch_assoc());
+        // print_r($ResCuentas->fetch_assoc());
         // echo"</pre>";
-    while ($row=$ResEmpleados->fetch_assoc()) {
+    while ($row=$ResCuentas->fetch_assoc()) {
         echo"<tr scope='row'>";
       
+         echo "<th scope='row'>".$row['idCuenta']."</th>";
          echo "<th scope='row'>".$row['Nombre']."</th>";
-         echo "<th scope='row'>".$row['ApeUno']."</th>";
-         echo "<th scope='row'>".$row['ApeDos']."</th>";
-         echo "<th scope='row'>".$row['email']."</th>";
-         echo "<th scope='row'>".$row['FechaAlta']."</th>";
-         echo "<th scope='row'>".$row['FechaBaja']."</th>";
-         echo "<th scope='row'>".$row['NomDepa']."</th>";
-         echo "<th scope='row'>".$row['idJefe']."</th>";
-         echo "<th scope='row'>".$row['idRango']."</th>";
+         echo "<th scope='row'>".$row['Descripción']."</th>";
+         echo "<th scope='row'>".$row['Activo']."</th>";
+         echo "<th scope='row'>".$row['Creacion']."</th>";
+         echo "<th scope='row'>".$row['Actualizacion']."</th>";
+         echo "<th scope='row'>".$row['idEmpleado']."</th>";
          echo "<td><a type='button' class='btn btn-outline-success' href='UsuarioEmpleado.php?id=".$row['idCuenta']."'>Usuario</a></td>";
          echo "<td><a type='button' id='jsBtnBaja' class='btn btn-outline-danger' href='BajaEmpleado.php?id=".$row['idEmpleados']."'>Baja</a></td>";
          echo "<td><a type='button' class='btn btn-outline-info' href='ActualizarEmpleado.php?id=".$row['idEmpleados']."'>Actualizar</a></td>";
          echo"</tr>";
 
-    // [idEmpleados]
+    // [idCuenta]
     // [Nombre] 
-    // [ApeUno]
-    // [ApeDos]
-    // [email] 
-    // [FechaAlta]
-    // [FechaBaja] 
-    // [idDepartamento] 
-    // [idJefe] 
-    // [idRango] 
-    // [idCuenta] 
-    // [usuario]
-    // [Contra]
+    // [Descripción]
+    // [Activo]
+    // [Creacion] 
+    // [Actualizacion]
+    // [idEmpleado] 
+
       }
       ?>
     
