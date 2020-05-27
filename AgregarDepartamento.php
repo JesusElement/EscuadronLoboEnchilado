@@ -67,10 +67,11 @@
                             <?php
         	while ($row=$ResJefeID->fetch_assoc()) {
                echo"<option value='".$row['idJefe']."'>".$row['Nombre']."</option>";
+               
              }
-        ?>
+     ?>
                         </select>
-                    </div>
+                    </div>dfg
                     <br>
                     <div class="form-row">
                         <div class="input-group">
