@@ -52,7 +52,7 @@
             
             $InsertaUser = new DBC;
             $ResInsertaUser = $InsertaUser->InsertaDosDatos($table, $col_q, $col_w, $val_a, $val_b);
-            echo "<script> alert('Baja Autorizada!!!');
+            echo "<script> alert('Nuevo Empleado registrado!!!');
             location.href='AdministrarEmpleados.php'
            </script>"; 
            }else{

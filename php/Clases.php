@@ -529,6 +529,58 @@ $sql = "SELECT j.idJefe AS idJnom, em.Nombre nomJnom FROM jefes as j INNER JOIN 
 
 }
 
+function Jefes(){
+    
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+
+  
+    $sql = "SELECT  em.idEmpleados, em.Nombre, em.ApeUno as ApeUno, em.ApeDos as ApeDos, j.FechaAlta as FA, j.FechaBaja as FB from jefes as j INNER JOIN empleados as em on em.idEmpleados = j.idEmpleadoJ";
+    $Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+         //echo "<pre>";
+         // print_r($row=$Res->fetch_array(MYSQLI_NUM));
+         //echo "</pre>";
+         //print_r($row[1]);
+        // $row=$Res->fetch_array(MYSQLI_NUM);
+        $conexion = null;
+        return $Res;
+        
+        exit();
+    }
+    $conexion = null;
+}
+
+/* -------- Vamos a seleccionar todos los empleados que no sean jefes ------- */
+
+
+
+function NOTJefes(){
+    
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+
+  
+    $sql = "SELECT em.* from empleados as em WHERE em.idEmpleados not in (SELECT idEmpleadoJ FROM jefes);";
+    $Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+         //echo "<pre>";
+         // print_r($row=$Res->fetch_array(MYSQLI_NUM));
+         //echo "</pre>";
+         //print_r($row[1]);
+        // $row=$Res->fetch_array(MYSQLI_NUM);
+        $conexion = null;
+        return $Res;
+        
+        exit();
+    }
+    $conexion = null;
+}
+
 
 }
 

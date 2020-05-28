@@ -58,6 +58,20 @@
     text-align: center;
 }
 
+.contenedor .contenido .AdminEmpleadosCss .btnJefe{
+    width: auto;
+    height: 2.8rem;
+    margin-right: 3px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    font-size: large;
+}
+
+/* .contenedor .contenido .AdminEmpleadosCss .btnNJ{
+
+    
+} */
 
 
 .contenedor .footer {

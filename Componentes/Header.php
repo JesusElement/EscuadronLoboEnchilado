@@ -22,16 +22,16 @@
 </div>
   </li>
 
-
-
   <li class='nav-item'>
   <div class='dropdown'>
   <button class='btn btn-dark active navBtnCss dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
     Empleados
   </button>
   <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+  <a class='dropdown-item' href='AdministrarEmpleados.php'>Administrar</a>
     <a class='dropdown-item' href='AgregarEmpleadoForm.php'>Agregar</a>
-    <a class='dropdown-item' href='AdministrarEmpleados.php'>Administrar</a>
+    <a class='dropdown-item' href='AsenderEmpleado.php'>Jefes</a>
+   
   
   </div>
 </div>

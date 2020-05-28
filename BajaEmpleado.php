@@ -17,7 +17,9 @@
           
            $BajaEm = new DBC;
            $ResBajaEm = $BajaEm ->ActualizarUno($ColumUpdate, $ColumWhere, $VarWhere, $VarDato, $Tab);
-
+           echo "<script> alert('Baja Autorizada!!!');
+           location.href='AdministrarEmpleados.php'
+          </script>"; 
         }else{
             header("Location:login.php?error=1");
             exit();
