@@ -1,7 +1,7 @@
 <h3>Escuadron Lobo Enchilado</h3>
 <hr>
 <?php
-
+ 
     if(isset($_SESSION['Sesion'])){
         if ($_SESSION['Sesion'] == 'On') {
           echo"
@@ -43,7 +43,7 @@
   </button>
   <div class='dropdown-menu' aria-labelledby='dropdownMenuButtonD'>
     <a class='dropdown-item' href='AgregarDepartamentoForm.php'>Agregar Nuevo</a>
-    <a class='dropdown-item' href='AdministrarDepartamentos.php'>Administrar</a>
+    <a class='dropdown-item' href='AdministraDepartamento.php'>Administrar</a>
   
   </div>
 </div>
@@ -60,14 +60,6 @@
   </div>
 </div>
   </li>
-
-
-
-
-
-
-
-
   <li class='nav-item'>
   <a class='nav-link active btn-dark navBtnCss' href='php/DestruirSession.php'>Salir</a>
 </li>

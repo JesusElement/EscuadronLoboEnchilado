@@ -12,7 +12,7 @@
                isset($_POST['Activo']) && $_POST['Activo'] != "" &&
                isset($_POST['Creacion']) && $_POST['Creacion'] != "" &&
                isset($_POST['Actualizacion']) && $_POST['Actualizacion'] != "" &&
-               isset($_POST['idEmp']) && $_POST['idEmp'] != "" &&
+               isset($_POST['idEmp']) && $_POST['idEmp'] != "" 
             
            ){
 

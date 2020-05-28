@@ -73,7 +73,7 @@ $ResDe->data_seek(0);
           $NomJefeActual = $rowJD['nomJnom'];
      }
      
-/* ---------------- Imprimir los jefes que se pueden asignar ---------------- */
+/* ---------------- Imprimir los je fes que se pueden asignar ---------------- */
 
       $JefeID = new DBC;
       $ResJefeID = $JefeID->jefeIdNom();
@@ -121,7 +121,7 @@ $ResDe->data_seek(0);
   <label for='id'></label>
   <input type='text' value='".$row['idDepartamento']."' name='idForm' class='form-control idD' id='nom'  required>
 </div>
-</div>
+</div> 
 <div class='form-row'>
 <div class='form-group col-md-12'>
   <label for='inputEmail4'>Nombre Departamento</label>

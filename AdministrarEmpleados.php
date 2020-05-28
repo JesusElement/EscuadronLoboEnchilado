@@ -52,7 +52,7 @@
         <table class="table tab">
   <thead class="thead-dark">
     <tr>
-  
+
       <th scope="col">Nombre</th>
       <th scope="col">Apellido Uno</th>
       <th scope="col">Apellido Dos</th>
@@ -61,8 +61,8 @@
       <th scope="col">Fecha Baja</th>
       <th scope="col">Departamento</th>
       <th scope="col">Jefe</th>
-      <th scope="col">Rango</th>
-      <th scope="col">Usuario</th>
+      <th scope="col">Administrar Rango</th>
+      <th scope="col">Administrar Usuario</th>
       <th scope="col">Baja</th>
       <th scope="col">Actualizar</th>
     
@@ -87,7 +87,7 @@
          echo "<th scope='row'>".$row['FechaBaja']."</th>";
          echo "<th scope='row'>".$row['NomDepa']."</th>";
          echo "<th scope='row'>".$row['idJefe']."</th>";
-         echo "<th scope='row'>".$row['idRango']."</th>";
+         echo "<td><a type='button' class='btn btn-outline-warning' href='AdministraRangos.php?id=".$row['idCuenta']."'>Rango</a></td>";
          echo "<td><a type='button' class='btn btn-outline-success' href='UsuarioEmpleado.php?id=".$row['idCuenta']."'>Usuario</a></td>";
          echo "<td><a type='button' id='jsBtnBaja' class='btn btn-outline-danger' href='BajaEmpleado.php?id=".$row['idEmpleados']."'>Baja</a></td>";
          echo "<td><a type='button' class='btn btn-outline-info' href='ActualizarEmpleado.php?id=".$row['idEmpleados']."'>Actualizar</a></td>";

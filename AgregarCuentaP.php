@@ -2,21 +2,29 @@
 
     session_start(); 
     if(isset($_SESSION['Sesion'])){
-        if ($_SESSION['Sesion'] == 'On' && $_SESSION['Rango'] == 1) {
+        if ($_SESSION['Sesion'] == 'On' && $_SESSION['Rango'] == 1 || $_SESSION['Rango'] == 2) {
            require_once('Clases.php');
+           
+           
+         
+           $idCuenta = $_POST["idCuenta"];
+           $Nom = $_POST["Nom"]; 
+           $Des = $_POST["Des"]; 
+           $Activo = $_POST["Activo"];
+           $usuarioForm = $_POST["usuarioForm"];
+           $FechaCrea = $_POST["FechaCrea"]; 
+           $FechaAct = $_POST["FechaAct"]; 
+           $EmpleForm = $_POST["EmpleForm"]; 
+      
+
 
            if(
-               isset($_POST['nombreForm']) && $_POST['nombreForm'] != "" &&
-               isset($_POST['apeUnoForm']) && $_POST['apeUnoForm'] != "" &&
-               isset($_POST['apeDosForm']) && $_POST['apeDosForm'] != "" &&
-               isset($_POST['emailForm']) && $_POST['emailForm'] != "" &&
-               isset($_POST['usuarioForm']) && $_POST['usuarioForm'] != "" &&
-               isset($_POST['FechaForm']) && $_POST['FechaForm'] != "" &&
-               isset($_POST['jefeForm']) && $_POST['jefeForm'] != "" &&
-               isset($_POST['depaForm']) && $_POST['depaForm'] != "" &&
-               isset($_POST['contraForm']) && $_POST['contraForm'] != "" &&
-               isset($_POST['reContraForm']) && $_POST['reContraForm'] != "" 
-            
+               isset($_POST["idCuenta"]) && $_POST["idCuenta"] != "" &&
+               isset($_POST["Nom"]) && $_POST["Nom"] != "" &&
+               isset($_POST["Des"]) && $_POST["Des"] != "" &&
+               isset($_POST["Activo"]) && $_POST["Activo"] != "" &&
+               isset($_POST["usuarioForm"]) && $_POST["usuarioForm"] != "" 
+
            ){
 
             $table = 'empleados';
@@ -52,9 +60,7 @@
             
             $InsertaUser = new DBC;
             $ResInsertaUser = $InsertaUser->InsertaDosDatos($table, $col_q, $col_w, $val_a, $val_b);
-            echo "<script> alert('Baja Autorizada!!!');
-            location.href='AdministrarEmpleados.php'
-           </script>"; 
+               
            }else{
     
 

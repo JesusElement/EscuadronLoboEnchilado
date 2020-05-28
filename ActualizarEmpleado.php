@@ -22,7 +22,6 @@ if(isset($_SESSION['Sesion'])){
 
 
 if(
-  isset($_POST['idForm'])     && $_POST['idForm'] != "" &&
   isset($_POST['nombreForm']) && $_POST['nombreForm'] != "" &&
   isset($_POST['apeUnoForm']) && $_POST['apeUnoForm'] != "" &&
   isset($_POST['apeDosForm']) && $_POST['apeDosForm'] != "" &&
@@ -96,7 +95,7 @@ location.href='AdministrarEmpleados.php'
         <div class='form-row'>
 <div class='form-group col-md-12'>
   <label for='id'>id</label>
-  <input type='text' value='".$row['idEmpleados']."' name='idForm' class='form-control' id='nom' required>
+  <input type='text' value='".$row['idEmpleados']."' disabled name='idForm' class='form-control' id='nom' required>
 </div>
 </div>
 <div class='form-row'>

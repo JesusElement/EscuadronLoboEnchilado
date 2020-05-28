@@ -57,60 +57,39 @@
         <div class="FormAgregarEmpleado">
             <h3>Agregar Cuenta Contable</h3>
             <hr>
-    <form action="php/AgregarCuentaForm.php" method="POST">
+    <form action="php/AgregarCuentaP.php" method="POST">
   <div class="form-row">
-    <div class="form-group col-md-6 ">
+    <div class="form-group col-md-12 ">
       <label for="">idCuenta</label>
-      <input type="text" name="nombreForm" class="form-control" id="nom" required>
+      <input type="text" name="idCuenta" class="form-control" id="nom" required>
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="">Nombre</label>
-      <input type="text" name="apeUnoForm" class="form-control" id="ApeUno" required>
+      <input type="text" name="Nom" class="form-control" id="ApeUno" required>
     </div>
- 
+  </div>
+  <div class="form-row">
   <div class="form-group col-md-12">
       <label for="">Descripción de la Cuenta</label>
-      <input type="text" name="apeDosForm" class="form-control" id="ApeDos" required>
+      <input type="text" name="Des" class="form-control" id="ApeDos" required>
     </div>
   </div>
   <div class="form-row">
-  <div class="form-group col-md-6">
-      <label for="">Activo</label>
-      <input type="email" class="form-control" name="emailForm" id="inputEmail4" required>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <div class="input-group-text">
+                <input type="checkbox" name="activo"  aria-label="Radio button for following text input">
+            </div>
+        </div>
+        <input type="text" class="form-control" value="¿Activar Cuenta?" disabled aria-label="Text input with radio button">
     </div>
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="">Usuario</label>
-      <input type="Usuario" name="usuarioForm" class="form-control" id="inputEmail4" required>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="">Fecha de Creación</label>
-      <input type="date" name="FechaForm" class="form-control" id="datepicker" required>
-    </div>
-
-    <div class="form-group col-md-6">
-      <label for="">Fecha de Actualización</label>
-      <input type="date" name="FechaForm" class="form-control" id="datepicker" required>
-    </div>
-  </div>
-  <div class="form-row">
-      
-      <label class="mr-sm-2 sr-only">Preference</label>
-      <select class="custom-select mr-sm-2" name="jefeForm" id="inlineFormCustomSelect" >
-        <option selected disabled>Empleado</option>
-        <?php
-        	while ($row=$ResJefeID->fetch_assoc()) {
-               echo"<option value='".$row['idJefe']."'>".$row['Nombre']."</option>";
-             }
-        ?>
-      </select>
-    </div>
+</div>
     <br>
-    
-
+    <button type="submit" id="btnAE" class="btn btn-dark">Registrar</button>
+  </div>
+</form>
 
     <div class="footer">
         <?php 
@@ -121,3 +100,4 @@
 
     </body>
 </html>
+           
