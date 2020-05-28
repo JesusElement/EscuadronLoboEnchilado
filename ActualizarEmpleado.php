@@ -70,7 +70,7 @@ location.href='AdministrarEmpleados.php'
 <html lang="en">
 
 <head>
-  <title>Esqueleto</title>
+  <title>Actualizar Empleado</title>
   <?php
         include('Componentes/Recursos.php');
         ?>
@@ -94,8 +94,8 @@ location.href='AdministrarEmpleados.php'
         echo "
         <div class='form-row'>
 <div class='form-group col-md-12'>
-  <label for='id'>id</label>
-  <input type='text' value='".$row['idEmpleados']."' disabled name='idForm' class='form-control' id='nom' required>
+
+  <input type='text' value='".$row['idEmpleados']."' style='display: none;' name='idForm' class='form-control' id='nom' required>
 </div>
 </div>
 <div class='form-row'>

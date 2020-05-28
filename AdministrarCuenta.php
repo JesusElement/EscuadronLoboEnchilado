@@ -15,10 +15,9 @@
 /* -------------------------------------------------------------------------- */
 
 /* -------------------- Para llamar a las cuentas del catalogo ------------------- */
-            $table = 'cuenta';
-            $cuenta = new DBC;
-            $Rescuenta = $cuenta -> ImprimirEmpUs($table);
-   
+                $table = 'cuenta';
+                $Cuentas = new DBC;
+                $ResCuentas = $Cuentas -> ImprimirTodo($table);
 
         }else{
             header("Location:login.php?error=1");
@@ -56,10 +55,11 @@
       <th scope="col">idCuenta</th>
       <th scope="col">Nombre</th>
       <th scope="col">Descripción</th>
-      <th scope="col">Activo</th>
+      <th scope="col">Baja/Alta</th>
       <th scope="col">Creacion</th>
       <th scope="col">Actualizacion</th>
-      <th scope="col">idEmpleado</th>
+      <th scope="col">idActualizo</th>
+      <th scope="col">Actualizar</th>
       
     
 
@@ -78,13 +78,15 @@
          echo "<th scope='row'>".$row['idCuenta']."</th>";
          echo "<th scope='row'>".$row['Nombre']."</th>";
          echo "<th scope='row'>".$row['Descripción']."</th>";
-         echo "<th scope='row'>".$row['Activo']."</th>";
+         if($row['Activo'] == 1){
+            echo "<td><a type='button' id='jsBtnBaja' class='btn btn-outline-danger' href='BajaCuenta.php?id=".$row['idCuenta']."'>Baja</a></td>";
+         }else{
+            echo "<td><a type='button'  class='btn btn-outline-success' href='AltaCuenta.php?id=".$row['idCuenta']."'>Alta</a></td>";
+         }
          echo "<th scope='row'>".$row['Creacion']."</th>";
          echo "<th scope='row'>".$row['Actualizacion']."</th>";
-         echo "<th scope='row'>".$row['idEmpleado']."</th>";
-         echo "<td><a type='button' class='btn btn-outline-success' href='UsuarioEmpleado.php?id=".$row['idCuenta']."'>Usuario</a></td>";
-         echo "<td><a type='button' id='jsBtnBaja' class='btn btn-outline-danger' href='BajaEmpleado.php?id=".$row['idEmpleados']."'>Baja</a></td>";
-         echo "<td><a type='button' class='btn btn-outline-info' href='ActualizarEmpleado.php?id=".$row['idEmpleados']."'>Actualizar</a></td>";
+         echo "<th scope='row'>".$row['IdEmp']."</th>";
+         echo "<td><a type='button' class='btn btn-outline-info' href='ActualizarCuenta.php?id=".$row['idCuenta']."'>Actualizar</a></td>";
          echo"</tr>";
 
     // [idCuenta]

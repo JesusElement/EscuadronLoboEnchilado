@@ -32,7 +32,7 @@
        return $conexion;
     }
     
-    
+     
 
 
   
@@ -209,7 +209,7 @@ function InsertaSieteDatos($table,$col_q,$col_w,$col_e,$col_r,$col_t,$col_y,$col
      $col_r,
      $col_t,
      $col_y,
-     $col_u,
+     $col_u
      ) 
     
     VALUES (
@@ -219,7 +219,7 @@ function InsertaSieteDatos($table,$col_q,$col_w,$col_e,$col_r,$col_t,$col_y,$col
         '$val_d',
         '$val_e',
         '$val_f',
-        '$val_g',
+        '$val_g'
         )
     ";
 
@@ -376,6 +376,44 @@ function ImprimirEmpUs($table){
         }
 
     }
+
+/* ------------------- ESTO ES PARA ACTUALIZAR CINCO DATOS ------------------ */
+function ActualizarCinco($ColumUno, $ColumDos, $ColumTres, $ColumCuatro, $ColumCinco, $ColumSeis, $VarUno, $VarDos, $VarTres, $VarCuatro, $VarCinco, $VarSeis, $Tab){
+    $conex = new DBC;
+    $conexion =$conex ->Conecta();
+    
+    $Tabla = $Tab;
+    $ColumnaUno = $ColumUno;
+    $ColumnaDos = $ColumDos;
+    $ColumnaTres = $ColumTres;
+    $ColumnaCuatro = $ColumCuatro;
+    $ColumnaCinco = $ColumCinco;
+    $ColumnaSeis = $ColumSeis;
+    
+    $ValorUno = $VarUno;
+    $ValorDos = $VarDos;
+    $ValorTres = $VarTres;
+    $ValorCuatro = $VarCuatro;
+    $ValorCinco = $VarCinco;
+    $ValorSeis = $VarSeis;
+  
+$sql = "UPDATE $Tabla SET $ColumnaDos='".$ValorDos."',$ColumnaTres='".$ValorTres."',$ColumnaCuatro='".$ValorCuatro."' , $ColumnaCinco = '".$ValorCinco."', $ColumnaSeis = '".$ValorSeis."' WHERE $ColumnaUno='".$ValorUno."';";
+$Res = $conexion ->query($sql);  
+    if ($Res===false) {
+        trigger_error('Error, favor de reportarlo: '.$sql.'Error:'.$conexion->error, E_USER_ERROR);
+    } else {
+  
+ 
+   
+        return $Res;
+        }
+            
+}
+
+
+
+
+/* ------------------ ESTO ES PARA ACTUALIZAR CUATRO DATOS ------------------ */
 
     function ActualizarCuatro($ColumUno, $ColumDos, $ColumTres, $ColumCuatro, $ColumCinco, $VarUno, $VarDos, $VarTres, $VarCuatro, $VarCinco, $Tab){
         $conex = new DBC;

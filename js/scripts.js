@@ -17,7 +17,7 @@ $( document ).ready(function() {
  
      $('#jsBtnBaja').click(function(){
      var m = "";
-      if(confirm("Confirme baja (Es definitiva)...")){
+      if(confirm("Confirme baja...")){
        
     }
     else{
