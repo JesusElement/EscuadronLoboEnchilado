@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cfdi:Comprobante Certificado="Hola" Fecha="2020-05-31" FormaPago="01" LugarExpedicion="hola" MetodoPago="PUE" Moneda="MXN" NoCertificado="2020-05-29" Sello="" SubTotal="250.00" TipoDeComprobante="I" Total="290.00" Version="3.3"
+    xmlns:cfdi=""
+    xmlns:xsi="" xsi:schemaLocation="Rufino Tamayo">
+    <cfdi:Emisor Nombre="Venancio Shespierk Alejandro" RegimenFiscal="621" Rfc="sfhjfgj4446"/>
+    <cfdi:Receptor Nombre="La empresaX" Rfc="Empresax" UsoCFDI="G03"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto Cantidad="2" ClaveProdServ="46171505" ClaveUnidad="H87" Descripcion="duplicado de llave abloy" Importe="160.00" ValorUnitario="80.00">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="160.00" Importe="25.60" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+        <cfdi:Concepto Cantidad="1" ClaveProdServ="461715" ClaveUnidad="H87" Descripcion="duplicado de algo" Importe="90.00" ValorUnitario="90.00">
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="90.00" Importe="14.40" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos TotalImpuestosTrasladados="40.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado Importe="40.00" Impuesto="002" TasaOCuota="0.160000" TipoFactor="Tasa"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <registrofiscal:CFDIRegistroFiscal Folio="" Version="1.0"
+            xmlns:registrofiscal=""
+            xmlns:schemaLocation=""/>
+            <tfd:TimbreFiscalDigital FechaTimbrado="2019-12-27T15:24:56" NoCertificadoSAT="" RfcProvCertif="" SelloCFD="" SelloSAT="" UUID="" Version="1.1"
+                xmlns:tfd="" xsi:schemaLocation=""/>
+            </cfdi:Complemento>
+        </cfdi:Comprobante>

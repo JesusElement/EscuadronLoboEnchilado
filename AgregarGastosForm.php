@@ -2,7 +2,7 @@
     session_start(); 
     if(isset($_SESSION['Sesion'])){
         if ($_SESSION['Sesion'] == 'On') {
-           require_once('php/Clases.php');
+           require_once('php/Clases.php'); 
            
 
 /* -------------------------------------------------------------------------- */
@@ -59,18 +59,18 @@
             <hr>
     <form action="php/AgregarDepartamentoForm.php" method="POST">
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="inputEmail4">id Gasto</label>
       <input type="text" name="idGasto" class="form-control" id="idGasto" required>
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="">id Gasto Cabecero</label>
       <input type="text" name="GastoCabe" class="form-control" id="GastoCabe" required>
     </div>
  
-  <div class="form-group col-md-6">
+  <div class="form-group col-md-12">
       <label for="">id Cuenta</label>
       <input type="text" name="idCuenta" class="form-control" id="idCuenta" required>
     </div>
@@ -82,41 +82,52 @@
     </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="">Usuario</label>
       <input type="Usuario" name="usuarioForm" class="form-control" id="inputEmail4" required>
     </div>
-    <div class="form-group col-md-6">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
       <label for="">Fecha del Comprobante</label>
       <input type="date" name="FechaForm" class="form-control" id="datepicker" required>
     </div>
-    <div class="form-group col-md-6">
+  </div>
+    <div class="form-group col-md-12">
       <label for="inputEmail4">Factura</label>
       <input type="text" name="idfactura" class="form-control" id="idfactura" required>
     </div>
-    <div class="form-group col-md-6">
+  <div class="form-row">
+    <div class="form-group col-md-12">
       <label for="inputEmail4">Importe</label>
       <input type="text" name="Importe" class="form-control" id="Importe" required>
     </div>
-    <div class="form-group col-md-6">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
       <label for="inputEmail4">Impuesto</label>
       <input type="text" name="Impuesto" class="form-control" id="Impuesto" required>
     </div>
-    <div class="form-group col-md-6">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
       <label for="inputEmail4">UUID</label>
       <input type="text" name="idImpuesto" class="form-control" id="idImpuesto" required>
     </div>
-    <div class="form-group col-md-6">
+  <div class="form-row">
+    <div class="form-group col-md-12">
       <label for="inputEmail4">XML</label>
       <input type="text" name="XML" class="form-control" id="XML" required>
     </div>
-    <div class="form-group col-md-6">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
       <label for="inputEmail4">Ruta</label>
       <input type="text" name="Path" class="form-control" id="Path" required>
     </div>
-
   </div>
-  <div class="form-row">
+  </div>
+  
       
       
     
